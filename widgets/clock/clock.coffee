@@ -7,6 +7,7 @@ class Dashing.Clock extends Dashing.Widget
     today = new Date()
 
     h = today.getHours()
+    if h > 12 then h = h % 12
     m = today.getMinutes()
     s = today.getSeconds()
     m = @formatTime(m)
